@@ -167,7 +167,7 @@ curl "http://localhost:5000/stats"
 - T-Hub, KIIT-TBI, Villgro
 - C-CAMP, TIFAC SRIJAN
 
-## ðŸ”” Notifications
+##  Notifications
 
 ### Slack Integration
 - New grant alerts in `#grants-feed`
@@ -184,21 +184,6 @@ curl "http://localhost:5000/stats"
 - Weekly summary reports
 - Personalized recommendations
 - Deadline calendars
-
-## Development
-
-### Project Structure
-```
-india-grants-oracle/
-â”œâ”€â”€ src/
-â”‚   â”œâ”€â”€ agents/           # Magentic-One orchestrator
-â”‚   â”œâ”€â”€ scrapers/         # Scrapy spiders
-â”‚   â”œâ”€â”€ database/         # PostgreSQL models
-â”‚   â”œâ”€â”€ api/             # Flask API
-â”‚   â””â”€â”€ notifications/   # Slack/WhatsApp
-â”œâ”€â”€ data/                # Downloaded files
-â”œâ”€â”€ logs/                # Application logs
-```
 
 ## Contributing
 
