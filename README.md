@@ -1,10 +1,10 @@
-﻿# ðŸ—ï¸ India Startup Grant Oracle
+India Startup Grant Oracle
 
 **One source-of-truth for every non-dilutive rupee the Indian government offers startups (â‚¹10k â†’ â‚¹25 Cr)**
 
 A comprehensive multi-agent system that discovers, tracks, and notifies about government grants, subsidies, and funding schemes for Indian startups.
 
-## ðŸŽ¯ Features
+## Features
 
 - **Comprehensive Coverage**: Tracks grants from 40+ government agencies, PSUs, and incubators
 - **Multi-Agent Discovery**: Uses Magentic-One AI agents for intelligent web scraping and data extraction
@@ -13,7 +13,7 @@ A comprehensive multi-agent system that discovers, tracks, and notifies about go
 - **Smart Filtering**: Filter by amount, sector, stage, state, and eligibility criteria
 - **Deadline Tracking**: Automated reminders for upcoming application deadlines
 
-## ðŸ—ï¸ Architecture
+## Architecture
 
 ### Multi-Agent System (Magentic-One)
 - **LeadPlanner**: Orchestrates daily discovery missions
@@ -34,7 +34,7 @@ A comprehensive multi-agent system that discovers, tracks, and notifies about go
 - **Flask API**: RESTful endpoints with CORS support
 - **Hasura**: Auto-generated GraphQL API (optional)
 
-## ðŸ“Š Data Schema
+## Data Schema
 
 ```json
 {
@@ -57,7 +57,7 @@ A comprehensive multi-agent system that discovers, tracks, and notifies about go
 }
 ```
 
-## ðŸš€ Quick Start
+## Quick Start
 
 ### Prerequisites
 - Python 3.11+
@@ -108,7 +108,7 @@ TWILIO_SID=AC...                         # For WhatsApp notifications
 TWILIO_TOKEN=...
 ```
 
-## ðŸ“¡ API Endpoints
+## API Endpoints
 
 ### Core Endpoints
 - `GET /` - API information and available endpoints
@@ -143,7 +143,7 @@ curl "http://localhost:5000/search?q=biotechnology"
 curl "http://localhost:5000/stats"
 ```
 
-## ðŸ•·ï¸ Data Sources
+## Data Sources
 
 ### Central Government
 - **DPIIT**: Startup India Seed Fund, various schemes
@@ -185,7 +185,7 @@ curl "http://localhost:5000/stats"
 - Personalized recommendations
 - Deadline calendars
 
-## ðŸ› ï¸ Development
+## Development
 
 ### Project Structure
 ```
@@ -200,7 +200,7 @@ india-grants-oracle/
 â”œâ”€â”€ logs/                # Application logs
 ```
 
-## ðŸ¤ Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -208,23 +208,17 @@ india-grants-oracle/
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## ðŸ“„ License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## ðŸ™ Acknowledgments
+## Acknowledgments
 
 - Built with [Magentic-One](https://github.com/magentic-ai/magentic) for AI orchestration
 - Uses [Scrapy](https://scrapy.org/) for web scraping
 - Powered by [Flask](https://flask.palletsprojects.com/) for the API
 - Database powered by [PostgreSQL](https://www.postgresql.org/)
 
-## ðŸ“ž Support
 
-For support, email support@indiagrantsoracle.com or join our Slack channel.
-
----
-
-**Made with â¤ï¸ for Indian Startups**
 
 
