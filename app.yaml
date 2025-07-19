@@ -1,0 +1,28 @@
+runtime: python311
+
+env_variables:
+  OPENAI_API_KEY: "your-openai-api-key"
+  DATABASE_URL: "postgresql://grants:your-password@/grantsdb?host=/cloudsql/your-project:your-region:grants-db"
+  REDIS_URL: "redis://your-redis-ip:6379"
+  SLACK_WEBHOOK: "your-slack-webhook-url"
+  TWILIO_SID: "your-twilio-sid"
+  TWILIO_TOKEN: "your-twilio-token"
+
+automatic_scaling:
+  min_instances: 1
+  max_instances: 10
+  target_cpu_utilization: 0.6
+
+resources:
+  cpu: 1
+  memory_gb: 2
+  disk_size_gb: 10
+
+handlers:
+- url: /.*
+  script: auto
+  secure: always
+
+beta_settings:
+  cloud_sql_instances: your-project:your-region:grants-db
+

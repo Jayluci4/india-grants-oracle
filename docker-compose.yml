@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_DB: grantsdb
+      POSTGRES_USER: grants
+      POSTGRES_PASSWORD: grants
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:latest
+    restart: always
+    ports:
+      - "6379:6379"
+
+  # Placeholder for agents - will be expanded later
+  # agents:
+  #   build: .
+  #   environment:
+  #     OPENAI_API_KEY: ${OPENAI_API_KEY}
+  #     DATABASE_URL: ${DATABASE_URL}
+  #     REDIS_URL: ${REDIS_URL}
+  #     SLACK_WEBHOOK: ${SLACK_WEBHOOK}
+  #     TWILIO_SID: ${TWILIO_SID}
+  #     TWILIO_TOKEN: ${TWILIO_TOKEN}
+  #   depends_on:
+  #     - db
+  #     - redis
+
+volumes:
+  db_data:
+
+

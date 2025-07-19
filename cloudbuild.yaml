@@ -1,0 +1,45 @@
+steps:
+  # Build the container image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/grants-oracle:$COMMIT_SHA', '.']
+  
+  # Push the container image to Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/grants-oracle:$COMMIT_SHA']
+  
+  # Deploy container image to Cloud Run
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+    - 'run'
+    - 'deploy'
+    - 'grants-oracle'
+    - '--image'
+    - 'gcr.io/$PROJECT_ID/grants-oracle:$COMMIT_SHA'
+    - '--region'
+    - 'us-central1'
+    - '--platform'
+    - 'managed'
+    - '--allow-unauthenticated'
+    - '--port'
+    - '8000'
+    - '--memory'
+    - '2Gi'
+    - '--cpu'
+    - '1'
+    - '--max-instances'
+    - '10'
+    - '--set-env-vars'
+    - 'DATABASE_URL=postgresql://grants:$$DB_PASSWORD@$$DB_HOST:5432/grantsdb,REDIS_URL=redis://$$REDIS_HOST:6379'
+    - '--set-cloudsql-instances'
+    - '$$CLOUDSQL_CONNECTION_NAME'
+
+images:
+  - 'gcr.io/$PROJECT_ID/grants-oracle:$COMMIT_SHA'
+
+substitutions:
+  _DB_HOST: '127.0.0.1'
+  _DB_PASSWORD: 'your-db-password'
+  _REDIS_HOST: 'your-redis-ip'
+  _CLOUDSQL_CONNECTION_NAME: 'your-project:your-region:grants-db'
+
