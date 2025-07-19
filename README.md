@@ -1,10 +1,10 @@
-# 🏗️ India Startup Grant Oracle
+﻿# ðŸ—ï¸ India Startup Grant Oracle
 
-**One source-of-truth for every non-dilutive rupee the Indian government offers startups (₹10k → ₹25 Cr)**
+**One source-of-truth for every non-dilutive rupee the Indian government offers startups (â‚¹10k â†’ â‚¹25 Cr)**
 
 A comprehensive multi-agent system that discovers, tracks, and notifies about government grants, subsidies, and funding schemes for Indian startups.
 
-## 🎯 Features
+## ðŸŽ¯ Features
 
 - **Comprehensive Coverage**: Tracks grants from 40+ government agencies, PSUs, and incubators
 - **Multi-Agent Discovery**: Uses Magentic-One AI agents for intelligent web scraping and data extraction
@@ -13,7 +13,7 @@ A comprehensive multi-agent system that discovers, tracks, and notifies about go
 - **Smart Filtering**: Filter by amount, sector, stage, state, and eligibility criteria
 - **Deadline Tracking**: Automated reminders for upcoming application deadlines
 
-## 🏗️ Architecture
+## ðŸ—ï¸ Architecture
 
 ### Multi-Agent System (Magentic-One)
 - **LeadPlanner**: Orchestrates daily discovery missions
@@ -34,7 +34,7 @@ A comprehensive multi-agent system that discovers, tracks, and notifies about go
 - **Flask API**: RESTful endpoints with CORS support
 - **Hasura**: Auto-generated GraphQL API (optional)
 
-## 📊 Data Schema
+## ðŸ“Š Data Schema
 
 ```json
 {
@@ -57,7 +57,7 @@ A comprehensive multi-agent system that discovers, tracks, and notifies about go
 }
 ```
 
-## 🚀 Quick Start
+## ðŸš€ Quick Start
 
 ### Prerequisites
 - Python 3.11+
@@ -68,7 +68,7 @@ A comprehensive multi-agent system that discovers, tracks, and notifies about go
 
 1. **Clone and Setup**
 ```bash
-git clone https://github.com/YOUR_USERNAME/india-grants-oracle.git
+git clone https://github.com/Jayluci4/india-grants-oracle.git
 cd india-grants-oracle
 cp .env.example .env
 # Edit .env with your API keys
@@ -108,7 +108,7 @@ TWILIO_SID=AC...                         # For WhatsApp notifications
 TWILIO_TOKEN=...
 ```
 
-## 📡 API Endpoints
+## ðŸ“¡ API Endpoints
 
 ### Core Endpoints
 - `GET /` - API information and available endpoints
@@ -133,7 +133,7 @@ TWILIO_TOKEN=...
 # Get all live grants
 curl "http://localhost:5000/grants?status=live"
 
-# Get early stage grants above ₹50 lakh
+# Get early stage grants above â‚¹50 lakh
 curl "http://localhost:5000/grants?bucket=Early%20Stage&min_amount=50"
 
 # Search for biotechnology grants
@@ -143,7 +143,7 @@ curl "http://localhost:5000/search?q=biotechnology"
 curl "http://localhost:5000/stats"
 ```
 
-## 🕷️ Data Sources
+## ðŸ•·ï¸ Data Sources
 
 ### Central Government
 - **DPIIT**: Startup India Seed Fund, various schemes
@@ -167,7 +167,7 @@ curl "http://localhost:5000/stats"
 - T-Hub, KIIT-TBI, Villgro
 - C-CAMP, TIFAC SRIJAN
 
-## 🔔 Notifications
+## ðŸ”” Notifications
 
 ### Slack Integration
 - New grant alerts in `#grants-feed`
@@ -185,22 +185,22 @@ curl "http://localhost:5000/stats"
 - Personalized recommendations
 - Deadline calendars
 
-## 🛠️ Development
+## ðŸ› ï¸ Development
 
 ### Project Structure
 ```
 india-grants-oracle/
-├── src/
-│   ├── agents/           # Magentic-One orchestrator
-│   ├── scrapers/         # Scrapy spiders
-│   ├── database/         # PostgreSQL models
-│   ├── api/             # Flask API
-│   └── notifications/   # Slack/WhatsApp
-├── data/                # Downloaded files
-├── logs/                # Application logs
+â”œâ”€â”€ src/
+â”‚   â”œâ”€â”€ agents/           # Magentic-One orchestrator
+â”‚   â”œâ”€â”€ scrapers/         # Scrapy spiders
+â”‚   â”œâ”€â”€ database/         # PostgreSQL models
+â”‚   â”œâ”€â”€ api/             # Flask API
+â”‚   â””â”€â”€ notifications/   # Slack/WhatsApp
+â”œâ”€â”€ data/                # Downloaded files
+â”œâ”€â”€ logs/                # Application logs
 ```
 
-## 🤝 Contributing
+## ðŸ¤ Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -208,22 +208,23 @@ india-grants-oracle/
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📄 License
+## ðŸ“„ License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## ðŸ™ Acknowledgments
 
 - Built with [Magentic-One](https://github.com/magentic-ai/magentic) for AI orchestration
 - Uses [Scrapy](https://scrapy.org/) for web scraping
 - Powered by [Flask](https://flask.palletsprojects.com/) for the API
 - Database powered by [PostgreSQL](https://www.postgresql.org/)
 
-## 📞 Support
+## ðŸ“ž Support
 
 For support, email support@indiagrantsoracle.com or join our Slack channel.
 
 ---
 
-**Made with ❤️ for Indian Startups**
+**Made with â¤ï¸ for Indian Startups**
+
 
